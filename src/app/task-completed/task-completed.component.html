@@ -1,0 +1,20 @@
+<div >
+  <h1>Task completed</h1>
+    <table border="2">
+       <tr>
+         <th>Id</th>
+         <th>Name</th>
+         <th>IsBoolean</th>
+         
+       </tr>
+       <ng-container *ngFor="let data of userConfirm ">
+          <tr *ngIf="data.isBoolean==true">
+            <td>{{data.id}}</td>
+            <td>{{data.name}}</td>
+            <td>{{data.isBoolean}}</td>
+            
+          </tr>
+          
+        </ng-container>
+     </table>
+     </div>

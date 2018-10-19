@@ -1,0 +1,24 @@
+<div>
+  <H1>Task List</H1>
+  <table border="2">
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>IsBoolean</th>
+      <th>Action</th>
+    </tr>
+    <ng-container *ngFor="let data of userList;let i=index; ">
+      <!-- <tr *ngIf="data.isBoolean==false"> -->
+        <tr>
+        <td>{{data.id}}</td>
+        <td>{{data.name}}</td>
+        <td>{{data.isBoolean}}</td>
+
+        <td><button href="#" (click)="modified(i)">Confirm</button></td>
+      </tr>
+    </ng-container>
+
+  </table>
+</div>
+<hr>
+<app-task-completed [userConfirm]="userList"></app-task-completed>
