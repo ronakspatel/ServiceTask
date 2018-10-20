@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { TaskListComponent } from './task-list/task-list.component';
 import { TaskCompletedComponent } from './task-completed/task-completed.component';
 
-import {MainService} from './main.service';
+import {UserService} from './user.service';
 
 
 @NgModule({
@@ -18,7 +18,7 @@ import {MainService} from './main.service';
   imports: [
     BrowserModule
   ],
-  providers: [MainService],
+  providers: [UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
