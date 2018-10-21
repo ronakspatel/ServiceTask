@@ -7,8 +7,8 @@
       <th>IsComplete</th>
 
     </tr>
-    <ng-container *ngFor="let data of filterData ">
-      <tr >
+    <ng-container *ngFor="let data of userConfirm ">
+      <tr *ngIf="data.isComplete==true" >
         <td>{{data.id}}</td>
         <td>{{data.name}}</td>
         <td>{{data.isComplete}}</td>

@@ -13,24 +13,15 @@ export class TaskCompletedComponent implements OnInit {
    */
  
   public userConfirm: UserModel[];
-  public filterData=[];
+  
   //inject  mainServices
   constructor(private serviceResponse: UserService) { 
 
   }
   // call getData method in mainservice
   ngOnInit() {
+    this.userConfirm=this.serviceResponse.getData();
     
   }
-  ngAfterViewChecked(){
-    this.userConfirm=this.serviceResponse.getData();
-        this.userConfirm.forEach(element => {
-          if (element.isComplete==true) {
-            this.filterData.push(element);
-          }
-        });
-        console.log(this.filterData);
-
-    }
-
+ 
 }
